@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제 1</title>
+</head>
+<body>
+<h2>4의 배수일까 아닐까</h2>
+
+<script>
+    let number = prompt("숫자를 입력하세요");
+    let sure = "맞습니다";
+    let not = "아닙니다";
+
+    if(number !== null){
+        if((number % 4) === 0) {
+            document.write(number+"는 4의 배수가 "+ sure)
+        }else{
+            document.write(number+"는 4의 배수가 "+ not)
+        }
+
+
+
+    }else {
+      document.write("입력된 숫자가 없습니다")
+    };
+
+
+
+
+</script>
+</body>
+</html>
