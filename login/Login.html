@@ -20,6 +20,7 @@
         align-items: center;
         justify-content: center;
         margin: 0; /* body의 기본 margin 값을 0으로 설정 */
+
     }
 
     img#background {
@@ -42,21 +43,46 @@
     form {
         border: 2px solid gray;
         padding: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+        /*그림자효과인데 집가서 수정해야할거같음 (라오루 그림자처럼 만들기)*/
+        text-shadow: 2px 2px 4px #999, -2px -2px 4px #333;
+
     }
 
-    label, input, button {
+    label, input {
         display: block;
         margin: 10px;
         font-size: 20px;
         color: hsl(34, 180%, 60%);
+        /*그림자효과인데 집가서 수정해야할거같음 (라오루 그림자처럼 만들기)*/
+        text-shadow: 2px 2px 4px #999, -2px -2px 4px #333;
+    /*    아이디 비밀번호 텍스트입력칸들 이미지 넣어야 이쁠듯*/
 
     }
+
 
     button {
         margin: 0 auto;
         color: hsl(34, 180%, 60%);
+        font-size: 20px;
+        text-shadow: 2px 2px 4px #999, -2px -2px 4px #333;
     }
 /*    버튼좀 꾸미고 버튼오른쪽에 회원가입버튼도 넣어야할거같음*/
+    #horizontal{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .button-shape{
+        /*버튼 모양같은곳에 이미지 삽입예정*/
+        width: 100px;
+        height: 30px;
+    }
+    a{
+        text-decoration: none;
+    }
+
 
 
 </style>
@@ -69,7 +95,11 @@
         <input type="text" id="username">
         <label for="password">비밀번호</label>
         <input type="password" id="password">
-        <button type="submit">입장</button>
+        <div id="horizontal">
+            <a><button type="submit" class="button-shape">입장</button></a>
+            <a href="Account.html" ><button type="button" class="button-shape">회원가입</button></a>
+        </div>
+
     </form>
 </div>
 </body>
