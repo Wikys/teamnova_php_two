@@ -4,65 +4,101 @@
     <title>회원 가입</title>
 </head>
 <style>
-
-    label, input {
-        display: block;
-        margin: 10px;
-        font-size: 20px;
-        color: hsl(34, 180%, 60%);
-        /*그림자효과인데 집가서 수정해야할거같음 (라오루 그림자처럼 만들기)*/
-        text-shadow: 2px 2px 4px #999, -2px -2px 4px #333;
-        /*    아이디 비밀번호 텍스트입력칸들 이미지 넣어야 이쁠듯*/
-    }
-
-    div#login-form {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
+    body {
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 100vh; /* 높이를 화면 높이와 동일하게 지정 */
+        color: hsl(34, 180%, 60%);
+        text-shadow: 2px 2px 4px #999, -2px -2px 4px #333;
+        flex-direction: column;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        border: solid 2px black;
+        padding: 10px;
+
+    }
+
+    form > div {
+        line-height: 30px;
+    }
+
+    p {
+        text-align: center;
     }
 
     button {
-        display: flex;
-        justify-content: center;
-        margin: 10px;
-        font-size: 20px;
         color: hsl(34, 180%, 60%);
-        /*그림자효과인데 집가서 수정해야할거같음 (라오루 그림자처럼 만들기)*/
         text-shadow: 2px 2px 4px #999, -2px -2px 4px #333;
-        /*    아이디 비밀번호 텍스트입력칸들 이미지 넣어야 이쁠듯*/
-    }
-
-    /*버튼이미지 입히기*/
-    #exit {
-        /* x버튼 */
-        margin-left: auto;
-    }
-
-    #submit {
-        /* 제출버튼 */
-
-
-
     }
 
 </style>
 <body>
-<div id="login-form">
-    <form>
-        <button type="button" id="exit">X</button>
-        <label for="username">아이디</label>
-        <input id="username" type="text">
-        <label for="password">비밀번호</label>
-        <input id="password" type="password">
-        <label for="password-confirm">비밀번호 확인</label>
-        <input id="password-confirm" type="password">
-        <button type="button" id="submit">제출</button>
-    </form>
-</div>
+<header>
+    <h1>회원가입</h1>
+</header>
+<form>
+    <label for="user-id">아이디</label>
+    <div>
+        <input type="text" id="user-id">
+        <button type="button">중복확인</button>
+    </div>
+    <label for="user-nick">닉네임</label>
+    <div>
+        <input type="text" id="user-nick">
+        <button type="button">중복확인</button>
+    </div>
+    <label for="user-password">비밀번호</label>
+    <div>
+        <input type="password" id="user-password">
+    </div>
+    <label for="user-password-confirm">비밀번호 확인</label>
+    <div>
+        <input type="password" id="user-password-confirm">
+    </div>
+    <p id="user-password-confirm-message"></p>
+    <button type="button" style="height: 30px" id="account-success">가입하기</button>
+</form>
+
+<script>
+    let account_Success = document.querySelector("#account-success"); //가입하기버튼
+    let user_Password = document.querySelector("#user-password"); //패스워드 인풋박스
+    let user_Password_Confirm = document.querySelector("#user-password-confirm"); //패스워드확인 인풋박스
+    let password_Success = false; //비밀번호 일치여부
+    let user_password_confirm_message = document.querySelector("#user-password-confirm-message");
+
+
+    // 가입하기 버튼 클릭시 작동하는코드 (나중에 중복검사 실행후 이동하는걸로 바꿔야함)
+    account_Success.addEventListener("click", function () {
+        window.location.href = "Login.html";
+    })
+
+    //비밀번호 일치여부 조건문
+    user_Password.addEventListener("input", function () {
+        if (user_Password.value === user_Password_Confirm.value && user_Password.value !== "" && user_Password_Confirm.value !== "") {
+            password_Success = true;
+            user_password_confirm_message.textContent = "비밀번호가 일치합니다";
+
+        } else {
+            password_Success = false;
+            user_password_confirm_message.textContent = "비밀번호가 일치하지 않습니다";
+        }
+    })
+    //비밀번호 일치여부 조건문2
+    user_Password_Confirm.addEventListener("input", function (){
+        if (user_Password.value === user_Password_Confirm.value && user_Password.value !== "" && user_Password_Confirm.value !== "") {
+            password_Success = true;
+            user_password_confirm_message.textContent = "비밀번호가 일치합니다";
+
+        } else {
+            password_Success = false;
+            user_password_confirm_message.textContent = "비밀번호가 일치하지 않습니다";
+        }
+    })
+
+</script>
 </body>
 </html>
