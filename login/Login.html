@@ -96,11 +96,18 @@
         <label for="password">비밀번호</label>
         <input type="password" id="password">
         <div id="horizontal">
-            <a><button type="submit" class="button-shape">입장</button></a>
+            <a><button type="button" class="button-shape" id="enter">입장</button></a>
             <a href="Account.html" ><button type="button" class="button-shape">회원가입</button></a>
         </div>
 
     </form>
 </div>
+<script>
+    let enter = document.querySelector("#enter"); // 입장버튼
+
+    enter.addEventListener("click", function (){
+        window.location.href = "../main/Main.html";
+    })
+</script>
 </body>
 </html>
