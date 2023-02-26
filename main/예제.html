@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modal Example</title>
+<!--  <link rel="stylesheet" href="style.css">-->
+</head>
+<style>
+  .modal {
+    display: none; /* 기본적으로 모달을 숨긴다 */
+    position: fixed; /* 화면에 고정시킨다 */
+    z-index: 1; /* 모달이 화면의 최상위에 오도록 한다 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* 모달이 내용이 넘칠 경우 스크롤바를 생성한다 */
+    background-color: rgba(0,0,0,0.4); /* 배경색을 투명 검정으로 설정한다 */
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 모달을 화면의 중앙에 위치시킨다 */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+</style>
+<body>
+<h1>Modal Example</h1>
+<button id="openModal">Open Modal</button>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Hello, I'm a modal!</p>
+  </div>
+</div>
+
+<!--<script src="script.js"></script>-->
+<script>
+  // 모달을 열기 위한 버튼 요소를 선택한다
+  var openModalBtn = document.getElementById("openModal");
+
+  // 모달 요소를 선택한다
+  var modal = document.getElementById("modal");
+
+  // 모달의 닫기 버튼 요소를 선택한다
+  var closeModalBtn = document.getElementsByClassName("close")[0];
+
+  // 모달을 열기 위한 이벤트 리스너를 추가한다
+  openModalBtn.onclick = function() {
+    modal.style.display = "block"; // 모달을 보이게 한다
+  }
+
+  // 모달의 닫기 버튼을 클릭하면 모달을 닫는 이벤트 리스너를 추가한다
+  closeModalBtn.onclick = function() {
+    modal.style.display = "none"; // 모달을 숨긴다
+  }
+
+  // 모달의 바깥쪽을 클릭하면 모달을 닫는 이벤트 리스너를 추가한다
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none"; // 모달을 숨긴다
+    }
+  }
+</script>
+</body>
+</html>

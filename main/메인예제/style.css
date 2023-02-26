@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f7f7f7;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    background-color: #555;
+    color: #fff;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.login {
+    font-size: 14px;
+}
+
+.bestseller, .new-book, .category {
+    margin-top: 30px;
+}
+
+.bestseller li, .new-book li {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.bestseller .book-cover, .new-book .book-cover {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.bestseller .book-cover img, .new-book .book-cover img {
+    width: 100%;
+}
+
+.bestseller .book-info, .new-book .book-info {
+    flex: 2;
+}
+
+.bestseller .book-info h3, .new-book .book-info h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.bestseller .book-info p, .new-book .book-info p {
+    margin: 0;
+}
+
+.bestseller .book-info .price, .new-book .book-info .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #f00;
+}
+
+.category ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.category li {
+    flex: 1;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.category li:last-child {
+    margin-right: 0;
+}
+
+.category a {
+    display: block;
+    padding: 10px;
+    background-color: #f7f7f7;
+    color: #555;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.footer {
+    background-color: #555;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.footer li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
