@@ -164,6 +164,20 @@ a {
     border-top: solid 2px red;
 }
 .account-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;/*자식요소 세로정렬*/
+    color: rgb(239, 194, 129);
+    width: 200px;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid red;
+    font-size: 14px;
 
 }
+.account-menu > h2{
+
+}
+
 
