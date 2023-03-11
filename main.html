@@ -5,112 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>림버스넷</title>
     <link rel="shortcut icon" type="image⁄x-icon" href="/img/title.png">
+    <link href="css/main_style.css" rel="stylesheet">
 </head>
 <style>
-    @font-face {
-        font-family: 'Arita-buri-SemiBold';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    #logo {
-        display: block;
-        margin: auto;
-
-
-        /*position: center;*/
-
-    }
-
-    /*body, body > header > p > a, body > section > p > a {*/
-    /*    !*색상*!*/
-    /*    color: rgb(239, 194, 129);*/
-    /*    text-shadow: 1px 1px 2px, -1px -1px 2px;*/
-
-    /*}*/
-    img#background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-    }
-
-    * {
-        font-family: Arita-buri-SemiBold;
-        padding: 0;
-        margin: 0
-    }
-
-    li {
-        list-style: none
-    }
-
-    a {
-        text-decoration: none;
-        font-size: 14px
-    }
-
-    .menu {
-        width: 800px;
-        overflow: hidden;
-        margin: 20px auto;
-        /*position: absolute;*/
-        /*top: 100px;*/
-
-    }
-
-
-    .menu > li {
-        width: 20%; /*20*5=100%*/
-        float: left;
-        text-align: center;
-        line-height: 40px;
-        background-color: rgb(175, 17, 28);
-
-    }
-
-    .menu a {
-        color: rgb(239, 194, 129);
-        /*text-shadow: 1px 1px 2px, -1px -1px 2px;*/
-        display: block;
-        height: 100%;
-        width: 100%;
-
-    }
-
-
-    .submenu > li:hover {
-        line-height: 40px;
-        background-color: rgba(255, 0, 0, 0.99);
-
-    }
-
-    .submenu {
-        height: 0; /*ul의 높이를 안보이게 처리*/
-        overflow: hidden;
-
-    }
-
-
-    .menu > li:hover, .menu > li:focus {
-        background-color: black;
-        transition-duration: 0.5s;
-
-    }
-
-    .menu > li:hover .submenu, .menu > li:focus .submenu {
-        display: flex; /*메뉴갯수에따라 크기 자동설정*/
-        flex-direction: column;
-        height: auto;
-        transition-duration: 1s;
-    }
-
-    .submenu li {
-        flex-grow: 1;
-    }
 </style>
 <body>
 <img src="img/background1.png" id="background">
@@ -128,7 +25,7 @@
         <li>
             <a href="#">캐릭터 게시판</a>
             <ul class="submenu">
-                <li><a href="https://naver.com">이상</a></li>
+                <li><a href="#">이상</a></li>
                 <li><a href="#">파우스트</a></li>
                 <li><a href="#">돈키호테</a></li>
                 <li><a href="#">료슈</a></li>
@@ -168,7 +65,51 @@
     </ul>
 
     <aside>
+        <div class="account-menu">
+            <h2>림버스넷</h2>
 
+        </div>
+        <ul class="left-menu">
+
+            <div>
+                <h2>직업게시판</h2>
+                <li>
+                <li><a href="#">이상<img src="/img/title.png" alt="Image Description" width="30" height="30"></a></li>
+                <li><a href="#">파우스트<img src="/img/title.png" alt="Image Description" width="30" height="30"></a></li>
+                <li><a href="#">돈키호테<img src="/img/title.png" alt="Image Description" width="30" height="30"></a></li>
+                <li><a href="#">료슈<img src="/img/title.png" alt="Image Description" width="30" height="30"></a></li>
+                <li><a href="#">뫼르소<img src="/img/title.png" alt="Image Description" width="30" height="30"></a></li>
+                <li><a href="#">홍루<img src="/img/title.png" alt="Image Description" width="30" height="30"></a></li>
+                <li><a href="#">히스클리프<img src="/img/title.png" alt="Image Description" width="30" height="30"></a></li>
+                <li><a href="#">이스마엘<img src="/img/title.png" alt="Image Description" width="30" height="30"></a></li>
+                <li><a href="#">로쟈<img src="/img/title.png" alt="Image Description" width="30" height="30"></a></li>
+                <li><a href="#">싱클레어<img src="/img/title.png" alt="Image Description" width="30" height="30"></a></li>
+                <li><a href="#">오티스<img src="/img/title.png" alt="Image Description" width="30" height="30"></a></li>
+                <li><a href="#">그레고르<img src="/img/title.png" alt="Image Description" width="30" height="30"></a></li>
+            </div>
+            <div>
+                <h2>정보 공유 게시판</h2>
+                <li>
+                <li><a href="#">실시간 소식</a></li>
+                <li><a href="#">팁과 노하우</a></li>
+            </div>
+            <div>
+                <h2>커뮤니티 게시판</h2>
+                <li>
+                <li><a href="#">자유게시판</a></li>
+                <li><a href="#">질문과 답변</a></li>
+                <li><a href="#">림버스에 바란다</a></li>
+                <li><a href="#">친구찾기</a></li>
+
+            </div>
+            <div class="job-board">
+                <h2>림버스 DB</h2>
+                <li>
+                <li><a href="#">세계관</a></li>
+            </div>
+
+
+        </ul>
     </aside>
 </nav>
 <section>
@@ -179,8 +120,6 @@
 
 </footer>
 
-<script>
-
-</script>
+<script type="text/javascript" src="/js/main_js.js"></script>
 </body>
 </html>

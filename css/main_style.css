@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'Arita-buri-SemiBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#logo {
+    display: block;
+    margin: auto;
+
+
+    /*position: center;*/
+
+}
+
+/*body, body > header > p > a, body > section > p > a {*/
+/*    !*색상*!*/
+/*    color: rgb(239, 194, 129);*/
+/*    text-shadow: 1px 1px 2px, -1px -1px 2px;*/
+
+/*}*/
+img#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+* {
+    font-family: Arita-buri-SemiBold;
+    padding: 0;
+    margin: 0
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+    font-size: 14px
+}
+
+.menu {
+    width: 800px;
+    overflow: hidden;
+    margin: 20px auto;
+    /*position: absolute;*/
+    /*top: 100px;*/
+
+}
+
+
+.menu > li {
+    width: 20%; /*20*5=100%*/
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgb(175, 17, 28);
+
+}
+
+.menu a {
+    color: rgb(239, 194, 129);
+    /*text-shadow: 1px 1px 2px, -1px -1px 2px;*/
+    display: block;
+    height: 100%;
+    width: 100%;
+
+}
+
+
+.submenu > li:hover {
+    line-height: 40px;
+    background-color: rgba(255, 0, 0, 0.99);
+
+}
+
+.submenu {
+    height: 0; /*ul의 높이를 안보이게 처리*/
+    overflow: hidden;
+
+}
+
+
+.menu > li:hover, .menu > li:focus {
+    background-color: black;
+    transition-duration: 0.5s;
+
+}
+
+
+.menu > li:hover .submenu, .menu > li:focus .submenu {
+    display: flex; /*메뉴갯수에따라 크기 자동설정*/
+    flex-direction: column;
+    height: auto;
+    transition-duration: 1s;
+}
+
+.submenu li {
+    flex-grow: 1;
+}
+
+.left-menu {
+    width: 200px;
+    height: auto;
+    overflow: hidden;
+    margin: 20px auto;
+    /*border: solid 1px rgb(175, 17, 28);*/
+    float: left;
+
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: #444444;
+
+}
+
+.left-menu li a {
+    display: block;
+    color: rgb(239, 194, 129);
+    /*margin: 7px;*/
+    position: relative;
+    padding-left: 20px;
+    height: 30px;
+    line-height: 30px;
+    box-sizing: border-box;
+    border-top: 1px solid gray;
+
+}
+
+.left-menu li a:hover {
+    background-color: black;
+    transition-duration: 0.5s;
+    background-color: black;
+}
+.left-menu li a img {
+    float: right; /* 이미지를 오른쪽으로 부동시킴 */
+    margin: 0 0 0 10px; /* 이미지와 텍스트 사이의 간격 */
+    max-width: 50%; /* 이미지의 최대 가로 너비 */
+    vertical-align: middle; /* 이미지를 수직 가운데 정렬 */
+}
+
+.left-menu h2 {
+    display: flex; /*수직중앙정렬을 위해 플렉스사용.. 앞으로는 뻘짓하지말고 정렬관련해선 플렉스쓰자..*/
+    align-items: center;
+    color: aliceblue;
+    padding-left: 20px;
+    height: 40px;
+
+    line-height: 30px;
+    padding-top: 2px;
+    box-sizing: border-box; /**/
+    border-top: solid 3px rgb(175, 17, 28);
+    /*border-bottom: 1px solid gray;*/
+    font-size: 20px;
+    margin: 2px;
+
+
+}
+.border-box{
+    border-top: solid 2px red;
+}
+.account-menu{
+
+}
+
