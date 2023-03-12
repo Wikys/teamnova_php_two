@@ -179,5 +179,10 @@ a {
 .account-menu > h2{
 
 }
+.account-menu > button{
+    margin: 7px;
+    color: white;
+    background-color: #222222;
+}
 
 
